@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayoutCustom" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <item name="boxStrokeErrorColor">@color/red</item>
+
+        <item name="boxStrokeColor">@color/red_1</item>
+        <item name="boxBackgroundMode">outline</item>
+    </style>
+
+    <style name="TextInputLayoutCustom1" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <item name="boxStrokeColor">@color/white</item>
+    <item name="boxBackgroundMode">outline</item>
+    </style>
+</resources>
+
+
+
