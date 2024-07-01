@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Crea il tuo account"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/textNome"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="text"
+        android:lineBreakStyle="none"
+        android:text="Nome"
+        android:textColor="#B3F44336"
+        android:textColorLink="#F44336"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+    <ImageView
+        android:id="@+id/imageNome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/textNome"
+        app:layout_constraintEnd_toStartOf="@id/textNome"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textNome"
+        app:srcCompat="@drawable/icons8_account"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/textCognome"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Cognome"
+        android:textColor="#B3F44336"
+        android:textColorLink="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNome"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/textCognome"
+        app:layout_constraintEnd_toStartOf="@id/textCognome"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textCognome"
+        app:layout_constraintVertical_bias="0.388"
+        app:srcCompat="@drawable/icons8_account"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/textTelefono"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Telefono"
+        android:textColor="#B3F44336"
+        android:textColorLink="#F44336"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCognome"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+    <ImageView
+        android:id="@+id/imageTelefono"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icons8_smartphone"
+        app:layout_constraintBottom_toBottomOf="@id/textTelefono"
+        app:layout_constraintEnd_toStartOf="@id/textTelefono"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textTelefono"
+        app:layout_constraintVertical_bias="0.611"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/textEmail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="textWebEmailAddress"
+        android:text="Email"
+        android:textColor="#B3F44336"
+        android:textColorLink="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/textTelefono"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/textEmail"
+        app:layout_constraintEnd_toStartOf="@id/textEmail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textEmail"
+        app:srcCompat="@drawable/outline_email_24"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/textPassword"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:textColor="#B3F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/textEmail"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+    <ImageView
+        android:id="@+id/imagePass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/textPassword"
+        app:layout_constraintEnd_toStartOf="@id/textPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textPassword"
+        app:layout_constraintVertical_bias="0.444"
+        app:srcCompat="@drawable/baseline_lock_outline_24"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/textConferma_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Conferma Password"
+        android:textColor="#B3F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/textPassword"
+        tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/textConferma_password"
+        app:layout_constraintEnd_toStartOf="@id/textConferma_password"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textConferma_password"
+        app:srcCompat="@drawable/baseline_lock_outline_24"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/buttonRegistrati"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/red"
+        android:gravity="center"
+        android:text="Registrati"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textConferma_password"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrati"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hai già un account?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/buttonAccedi"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="left"
+            android:padding="0dp"
+            android:text="Accedi"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
