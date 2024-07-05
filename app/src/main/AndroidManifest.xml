@@ -13,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
+        android:debuggable="true"
         android:theme="@style/Theme.MensaPalermo"
-        tools:targetApi="34">
+        tools:ignore="HardcodedDebugMode">
         <activity
             android:name=".RecuperaPasswordActivity"
             android:exported="false" />

@@ -15,6 +15,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var userAPI: UserAPI
@@ -40,16 +41,10 @@ class LoginActivity : AppCompatActivity() {
             val email = etEmailAddress.text.toString()
             val password = etPassword.text.toString()
 
-            // Dopo l'autenticazione l'utente viene riportato all'HomePage
-            Intent(this, HomePageActivity::class.java)
-            startActivity(intent)
-
-
             val jsonObject = JsonObject().apply {
                 addProperty("email", email)
                 addProperty("password", password)
             }
-
 
             userAPI.login(jsonObject).enqueue(object : Callback<JsonObject> {
                 override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
@@ -74,18 +69,16 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             })
+        }
 
-            textViewPswDim.setOnClickListener {
-                // L'utente viene riportato all'activity per riprendere la password
-                Intent(this, RecuperaPasswordActivity::class.java)
-                startActivity(intent)
-            }
+        textViewPswDim.setOnClickListener {
+            val intent = Intent(this, RecuperaPasswordActivity::class.java)
+            startActivity(intent)
+        }
 
-            textViewRegistrati.setOnClickListener {
-                //L'utente viene riportato alla pagina per registrarsi
-                Intent(this, RegistrazioneActivity::class.java)
-                startActivity(intent)
-            }
+        textViewRegistrati.setOnClickListener {
+            val intent = Intent(this, RegistrazioneActivity::class.java)
+            startActivity(intent)
         }
     }
 }

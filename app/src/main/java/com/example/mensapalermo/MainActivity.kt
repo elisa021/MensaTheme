@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
     private fun checkAuthentication(): Boolean {
         var isAuthenticated = false
 
-        userAPI.createUtente().enqueue(object : Callback<JsonObject> {
-            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+        userAPI.createUtente().enqueue(/* callback = */ object : Callback<JsonObject> {
+            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) =
                 if (response.isSuccessful) {
                     // Se la chiamata API ha avuto successo, l'utente è autenticato
                     isAuthenticated = true
@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity() {
                     // Se la chiamata API ha fallito, l'utente non è autenticato
                     isAuthenticated = false
                 }
-            }
 
             override fun onFailure(call: Call<JsonObject>, t: Throwable) {
                 // Se c'è stato un errore di rete, l'utente non è autenticato

@@ -1,9 +1,11 @@
 package com.example.mensapalermo
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mensapalermo.retrofit.UserAPI
@@ -15,16 +17,21 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RecuperaPasswordActivity : AppCompatActivity() {
-    private lateinit var etEmailRecuperaPassword: EditText
-    private lateinit var buttonInviaRecuperaPassword: Button
+
     private lateinit var userAPI: UserAPI
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recupera_password)
 
-        etEmailRecuperaPassword = findViewById(R.id.etEmailRecupero)
-        buttonInviaRecuperaPassword = findViewById(R.id.buttonRecupera)
+        val etEmailRecuperaPassword: EditText = findViewById(R.id.etEmailRecupero)
+        val buttonInviaRecuperaPassword: Button = findViewById(R.id.buttonRecupera)
+        val customButton: LinearLayout = findViewById(R.id.custom_button)
+
+        customButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         val retrofit = Retrofit.Builder()
             .baseUrl(UserAPI.BASE_URL)

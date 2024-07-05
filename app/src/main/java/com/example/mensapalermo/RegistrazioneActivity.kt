@@ -30,7 +30,7 @@ class RegistrazioneActivity : AppCompatActivity() {
         userAPI = retrofit.create(UserAPI::class.java)
 
         val textNome : EditText = findViewById(R.id.textNome) // Assicurati che l'ID sia corretto
-        val  textCognome : EditText = findViewById(R.id.textCognome)
+        val textCognome : EditText = findViewById(R.id.textCognome)
         val textTelefono : EditText = findViewById(R.id.textTelefono)
         val textEmail : EditText = findViewById(R.id.textEmail)
         val textPassword : EditText= findViewById(R.id.textPassword)
