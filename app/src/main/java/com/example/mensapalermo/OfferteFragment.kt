@@ -1,11 +1,11 @@
 package com.example.mensapalermo
 
-import OffertaAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,17 +19,21 @@ class OfferteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_offerte, container, false)
+        val view = inflater.inflate(R.layout.activity_main, container, false)
 
-        // Creazione della lista di offerte (puoi popolarla con i dati desiderati)
+        // Creazione della lista di offerte
         offerteList = createOfferteList()
 
         // Inizializzazione della RecyclerView
-        recyclerView = view.findViewById(R.id.recycler_view_offerte)
+        recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.setHasFixedSize(true)
 
-        // Creazione e impostazione dell'adapter per la RecyclerView
+        // Aggiunge lo spazio tra gli elementi della RecyclerView
+        val dividerItemDecoration = DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
+        recyclerView.addItemDecoration(dividerItemDecoration)
+
+        // Crea e imposta l'adapter per la RecyclerView
         offerteAdapter = OffertaAdapter(offerteList)
         recyclerView.adapter = offerteAdapter
 
@@ -37,7 +41,7 @@ class OfferteFragment : Fragment() {
     }
 
     private fun createOfferteList(): List<Offerta> {
-        // Simuliamo la creazione di una lista di offerte (puoi sostituire con i tuoi dati reali)
+        // Creazione la lista di offerte
         return listOf(
             Offerta("Sei uno studente?", "Mostra la tua carta studentesca alla cassa e prendi un menù completo e ottieni uno sconto ", "€15.00"),
             Offerta("Combo Meal", "Prendi un primo o un secondo con contorno, con una bibita", "€17.00"),
@@ -45,4 +49,3 @@ class OfferteFragment : Fragment() {
         )
     }
 }
-

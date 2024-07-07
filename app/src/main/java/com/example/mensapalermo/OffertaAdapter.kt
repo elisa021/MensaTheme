@@ -1,10 +1,11 @@
+package com.example.mensapalermo
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mensapalermo.Offerta
-import com.example.mensapalermo.R
+
 
 class OffertaAdapter(private val listaOfferte: List<Offerta>) : RecyclerView.Adapter<OffertaAdapter.OffertaViewHolder>() {
 
@@ -30,3 +31,4 @@ class OffertaAdapter(private val listaOfferte: List<Offerta>) : RecyclerView.Ada
         return listaOfferte.size
     }
 }
+
