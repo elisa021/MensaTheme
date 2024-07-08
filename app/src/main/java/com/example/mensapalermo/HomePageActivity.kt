@@ -19,6 +19,10 @@ class HomePageActivity : AppCompatActivity() {
 
     val fragmentContainer: FrameLayout  = findViewById(R.id.fragmentContainerContent)
     val dropdownMenu: Button = findViewById(R.id.fragmentButton)
+    val home : ImageButton = findViewById(R.id.imageButtonHome)
+    val menu : ImageButton = findViewById(R.id.imageButtonMenu)
+    val ordine :  ImageButton = findViewById(R.id.imageButtonOrdine)
+    val notifiche : ImageButton = findViewById(R.id.imageButtonNotifiche)
 
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +39,19 @@ class HomePageActivity : AppCompatActivity() {
         }
         // Carica il fragment OfferteFragment
         loadFragment(OfferteFragment())
+
+        home.setOnClickListener {
+            startActivity(Intent(this, HomePageActivity ::class.java))
+        }
+        menu.setOnClickListener {
+            startActivity(Intent(this, HomePageActivity ::class.java))
+        }
+        notifiche.setOnClickListener {
+            startActivity(Intent(this, HomePageActivity ::class.java))
+        }
+        ordine.setOnClickListener {
+            startActivity(Intent(this, HomePageActivity ::class.java))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -73,51 +73,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/black">
 
-        <ImageView
-            android:id="@+id/imageViewHome"
+        <ImageButton
+            android:id="@+id/imageButtonHome"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/sharp_home_24"
             android:layout_marginStart="16dp"
+            android:background="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription,MissingConstraints"/>
 
-        <ImageView
-            android:id="@+id/imageViewMenu"
+        <ImageButton
+            android:id="@+id/imageButtonMenu"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginEnd="44dp"
             android:src="@drawable/baseline_food_bank_24"
+            android:background="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageViewOrdine"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonOrdine"
             app:layout_constraintHorizontal_bias="0.958"
-            app:layout_constraintStart_toEndOf="@+id/imageViewHome"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonHome"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:id="@+id/imageViewOrdine"
+        <ImageButton
+            android:id="@+id/imageButtonOrdine"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="152dp"
             android:src="@drawable/baseline_fastfood_24"
+            android:background="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageViewHome"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonHome"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:id="@+id/imageViewNotifiche"
+        <ImageButton
+            android:id="@+id/imageButtonNotifiche"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/icons8_email"
+            android:src="@drawable/baseline_email_24"
+            android:background="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@id/imageViewOrdine"
+            app:layout_constraintStart_toEndOf="@id/imageButtonOrdine"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
